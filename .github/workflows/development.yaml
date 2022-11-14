@@ -57,7 +57,7 @@ jobs:
   bump_version:
     name: Bump version
     runs-on: ubuntu-latest
-    needs: [lint-test, security-checks]
+    needs: lint-test
     permissions: write-all
     outputs:
       new_tag: ${{ steps.taggerBumper.outputs.new_tag }}
