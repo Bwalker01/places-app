@@ -77,7 +77,7 @@ jobs:
 
   get_commit_sha:
     name: Get SHA
-    needs: [lint-test, security-checks]
+    needs: lint-test
     runs-on: ubuntu-latest
     outputs:
       sha_output: ${{ steps.short_sha_generator.outputs.SHORT_SHA }}
